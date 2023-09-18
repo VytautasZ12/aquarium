@@ -19,7 +19,7 @@ class Fish(models.Model):
     pavadinimas = models.CharField(verbose_name="Pavadinimas", max_length=100)
     kilme = models.CharField(verbose_name="Kilme", max_length=50)
     aprasymas = models.TextField(verbose_name="Aprasymas", max_length=1000, help_text="Trumpas zuvies aprasymas")
-    rusis = models.ForeignKey("FishSpieces", on_delete=models.SET_NULL, null=True)
+    rusis = models.ForeignKey("FishSpieces", on_delete=models.SET_NULL, null=True, related_name="fish")
 
     def __str__(self):
         return self.pavadinimas
