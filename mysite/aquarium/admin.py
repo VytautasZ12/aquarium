@@ -6,7 +6,7 @@ class FishAdmin(admin.ModelAdmin):
     list_display = ('pavadinimas', 'kilme', 'rusis')
     list_filter = ('kilme', 'rusis', 'pavadinimas')
 
-    search_fields = ["pavadinimas", "kilme", "rusis"]
+    search_fields = ["id", "fish__kilme", "fish__rusis"]
 
 
 # Register your models here.
